@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Posts</title>
+    <style>body{font-family:system-ui,Segoe UI,Arial;margin:24px}a{color:#0366d6}</style>
+  </head>
+  <body>
+    <h1>Posts</h1>
+    <p><a href="/new">+ New Post</a></p>
+    <ul>
+      <% posts.forEach(function(post){ %>
+        <li>
+          <a href="/post/<%= post.slug %>"><strong><%= post.title %></strong></a>
+          <p style="margin:4px 0;color:#444"><%= post.excerpt %></p>
+        </li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
